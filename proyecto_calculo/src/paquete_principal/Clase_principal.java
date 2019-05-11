@@ -46,7 +46,8 @@ public class Clase_principal {
         System.out.println("1. f(x) = x + 5 - (20 - x)\n2. f(x) = (x-1)^2 + 2 "
                 + "\n3. f(x) = x para x >=0\n\t  x para x < 0 \n"
                 + "4. f(x) = (x+2)^3\n5. f(x) = (x-2)^1/2\n\t  log_5"
-                + " [x(x + 4)]^2\n6. f(x) = ------------------\n\t\t   8 "
+                + " [x(x + 4)]^2\n6. f(x) = ------------------\n\t\t   8"
+                + "\n8.f(x) = 3/8 x-6 "// aqui falta ----- 
                 + "\n7. f(x) = log_8 x = m \n9. f(x) = log 4(x + 2)^2"
                 + "\n\t     x^5+x^2-9 \n10. f(x) = ------------- \n\t\tx-1");
         
@@ -78,17 +79,48 @@ public class Clase_principal {
                     mensaje = String.format("%s %d | %d     %d | %d\n", mensaje,
                     xi, y, x1,y1);
                     xi++;
-                    break;
+                  
                 }
+                break;
             case 5: // 5. f(x) = (x-2)^1/2
                 mensaje = String.format("%s | %s\n", "x", "y");
                 while (xi <= xf){
                     y = Math.pow((xi-2),0.33);
-                    System.out.printf("%.2f\n",y);
+                    
                     xi++;
                     mensaje = String.format("%s%d | %.2f\n", mensaje, xi, y);
-                    break;
-                }        
+                   
+                }  
+                break;
+            case 6: // f(x) = log5 (x(x+4))^3/8
+                mensaje = String.format ("%s | %s\n", "x", "y"); 
+                while(xi <= xf){
+                    y = (double) Math.pow(xi*(xi+4),3); 
+                    y = y/8;
+                    //
+                    y = (Math.log10(y) / Math.log10(5));
+                    ///
+
+                    mensaje = String.format("%s%d | %.2f\n", mensaje, xi, y);
+                    xi++;
+                    
+                } 
+                break;
+            case 7: // f(x) = log8 x = m
+                mensaje = String.format ("%s | %s\n", "x", "y"); 
+                while(xi <= xf){
+                    y = xi;
+                    //
+                    y = (Math.log10(y) / Math.log10(8));
+                    //
+                    mensaje = String.format("%s%d | %.2f\n", mensaje, xi, y);
+                    xi++;
+                 }
+                break;
+            case 8: //f(x) = 3/8 x-6   
+             
+                break;
+                        
             case 9: //9. f(x) = log 4(x + 2)^2
                 mensaje = String.format("%s | %s\n", "x", "y");
         }
