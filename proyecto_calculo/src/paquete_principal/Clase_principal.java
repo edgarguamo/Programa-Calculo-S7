@@ -38,9 +38,8 @@ public class Clase_principal {
         
         
         //Incio del programa
-        System.out.println("Bienvenido al generador de respuestas de"
-                + "Funciones Lineales \nPor favor seleccione la ecuación que "
-                + "quiere graficar:");
+        System.out.println("BIENVENIDO AL GENERADOR DE RESPUESTAS DE: "
+                + "Funciones Lineales que son las siguientes");
         
         // Presentación de la ecuacion al consumidor
         System.out.println("1. f(x) = x + 5 - (20 - x)\n2. f(x) = (x-1)^2 + 2 "
@@ -49,7 +48,8 @@ public class Clase_principal {
                 + " [x(x + 4)]^2\n6. f(x) = ------------------\n\t\t   8"
                 + "\n8.f(x) = 3/8 x-6 "// aqui falta ----- 
                 + "\n7. f(x) = log_8 x = m \n9. f(x) = log 4(x + 2)^2"
-                + "\n\t     x^5+x^2-9 \n10. f(x) = ------------- \n\t\tx-1");
+                + "\n\t     x^5+x^2-9 \n10. f(x) = ------------- \n\t\tx-1\n"
+                + "Por favor ingrese el numero de la ecuación que desea: " );
         
         // peticion de los rangos para la graficacion
         n_cal = teclado.nextInt();
@@ -88,11 +88,19 @@ public class Clase_principal {
                     y1 = x1;
                     mensaje = String.format("%s %d | %d     %d | %d\n", mensaje,
                     xi, y, x1,y1);
-                    xi++;
-                  
+                    xi++;   
                 }
                 break;
-       
+            case 4 ://4.f(x) = (x+2)^3
+                mensaje = String.format("%s | %s\n", "x", "y");
+                while (xi <= xf){
+                    y = Math.pow((xi+2),3);
+                    
+                    xi++;
+                    mensaje = String.format("%s%d | %.2f\n", mensaje, xi, y);
+                   
+                }
+                break;
             case 5: // 5. f(x) = (x-2)^1/2
                 mensaje = String.format("%s | %s\n", "x", "y");
                 while (xi <= xf){
