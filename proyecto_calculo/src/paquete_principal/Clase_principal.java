@@ -69,6 +69,16 @@ public class Clase_principal {
             
         }
         switch (n_cal){
+            case 2:// 2. f(x) = (x-1)^2 + 2
+                mensaje = String.format("%s | %s\n", "x", "y");
+                while (xi <= xf){
+                    y = Math.pow((xi-1),2);
+                    y =y + 2;
+                    xi++;
+                    mensaje = String.format("%s%d | %.2f\n", mensaje, xi, y);
+                   
+                }
+                break;
             case 3: // 3. f(x) = x para x >=0
                 mensaje = String.format("%s | %s     %s | %s\n", "x", "y", 
                         "x1","y1");
@@ -82,6 +92,7 @@ public class Clase_principal {
                   
                 }
                 break;
+       
             case 5: // 5. f(x) = (x-2)^1/2
                 mensaje = String.format("%s | %s\n", "x", "y");
                 while (xi <= xf){
