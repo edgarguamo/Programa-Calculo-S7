@@ -140,8 +140,17 @@ public class Clase_principal {
              
                 break;
                         
-            case 9: //9. f(x) = log 4(x + 2)^2
+            case 9: //9. f(x) = log 4(x + 2)^3
                 mensaje = String.format("%s | %s\n", "x", "y");
+                while(xi <= xf){
+                    y = Math.pow(xi+2, 3);
+                    //
+                    y = (Math.log10(y) / Math.log10(4));
+                    //
+                    mensaje = String.format("%s%d | %.2f\n", mensaje, xi, y);
+                    xi++;
+                }
+                break;
         }
         // Impresión de datos almacenados 
         System.out.printf("%s", mensaje);
