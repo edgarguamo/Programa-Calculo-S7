@@ -69,6 +69,16 @@ public class Clase_principal {
             
         }
         switch (n_cal){
+            case 1:// 2. f(x) = x+5-(20-x)
+                mensaje = String.format("%s | %s\n", "x", "y");
+                while (xi <= xf){
+                    y = xi+5-(20-xi);
+                    
+                    xi++;
+                    mensaje = String.format("%s%d | %.2f\n", mensaje, xi, y);
+                   
+                }
+                break;
             case 2:// 2. f(x) = (x-1)^2 + 2
                 mensaje = String.format("%s | %s\n", "x", "y");
                 while (xi <= xf){
@@ -151,7 +161,17 @@ public class Clase_principal {
                     xi++;
                 }
                 break;
-        }
+            case 10:// 2. f(x) = x^5+x^2+9/x-1
+                mensaje = String.format("%s | %s\n", "x", "y");
+                while (xi <= xf){
+                    y = (Math.pow(xi,5) + Math.pow(xi,2)+9)/(xi-1);
+                    
+                    xi++;
+                    mensaje = String.format("%s%d | %.2f\n", mensaje, xi, y);
+                   
+                }
+                break;
+        }   
         // Impresión de datos almacenados 
         System.out.printf("%s", mensaje);
        
