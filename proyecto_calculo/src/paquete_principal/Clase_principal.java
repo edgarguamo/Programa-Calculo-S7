@@ -96,7 +96,7 @@ public class Clase_principal {
                     x1 = -xi;
                     y = xi;
                     y1 = x1;
-                    mensaje = String.format("%s %d | %d     %d | %d\n", mensaje,
+                    mensaje = String.format("%s %d | %.0f     %d | %d\n", mensaje,
                     xi, y, x1,y1);
                     xi++;   
                 }
@@ -146,10 +146,17 @@ public class Clase_principal {
                     xi++;
                  }
                 break;
-            case 8: //f(x) = 3/8 x-6   
-             
-                break;
-                        
+            case 8: //f(x) = 3/8 x-6 
+                mensaje = String.format ("%s | %s\n", "x", "y"); 
+                while(xi <= xf){
+                    y = xi;
+                    //
+                    y = (0.38*y)-6;
+                    //
+                    mensaje = String.format("%s%d | %.2f\n", mensaje, xi, y);
+                    xi++;
+                 }
+                break;                        
             case 9: //9. f(x) = log 4(x + 2)^3
                 mensaje = String.format("%s | %s\n", "x", "y");
                 while(xi <= xf){
